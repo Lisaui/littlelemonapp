@@ -11,3 +11,89 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.cta {
+  text-align: center;
+  padding: 4rem 1rem;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.cta h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta button {
+  background-color: #495e57;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.specials {
+  padding: 2rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.specials h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.specials-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.special-card {
+  background-color: #fbdabb;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 250px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.special-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+
+
+.testimonials {
+  padding: 2rem;
+  background-color: #edefee;
+  text-align: center;
+}
+
+.review-grid {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.review-card {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 200px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
