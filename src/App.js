@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import BookingPage from './pages/BookingPage';
-import ConfirmedBooking from './pages/ConfirmedBooking';  // <-- Make sure this is here
+import ConfirmedBooking from './pages/ConfirmedBooking';  // ConfirmedBooking imported
 import About from './pages/About';
 import Menu from './pages/Menu';
 import OrderOnline from './pages/OrderOnline';

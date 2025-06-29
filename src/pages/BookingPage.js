@@ -1,18 +1,13 @@
-import React, { useReducer, useState, useEffect } from 'react';
+import { useReducer, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import BookingForm from '../components/BookingForm';
+import { submitBooking } from '../api/mockBookingAPI';  // import mock function
 
 const initializeTimes = () => ["17:00", "18:00", "19:00", "20:00"];
-
-const updateTimes = (state, action) => {
-  // You can later replace with fetchAPI(action.date) for dynamic times
-  return initializeTimes();
-};
+const updateTimes = (state, action) => initializeTimes();
 
 function BookingPage() {
   const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes());
-
-  // Initialize bookings from localStorage or empty array
   const [bookings, setBookings] = useState(() => {
     const savedBookings = localStorage.getItem('bookings');
     return savedBookings ? JSON.parse(savedBookings) : [];
@@ -20,16 +15,14 @@ function BookingPage() {
 
   const navigate = useNavigate();
 
-  // Save bookings to localStorage whenever bookings state changes
   useEffect(() => {
     localStorage.setItem('bookings', JSON.stringify(bookings));
   }, [bookings]);
 
-  // submitForm calls the API and updates local bookings on success
   const submitForm = async (formData) => {
-    const success = await window.submitAPI(formData);
+    const success = await submitBooking(formData);  // use mockBookingAPI here
     if (success) {
-      setBookings(prevBookings => [...prevBookings, formData]);
+      setBookings(prev => [...prev, formData]);
       navigate('/booking-confirmed');
     } else {
       alert('Booking submission failed. Please try again.');
@@ -44,8 +37,6 @@ function BookingPage() {
         dispatch={dispatch}
         submitForm={submitForm}
       />
-
-      {/* Optional: Show current bookings for testing */}
       <section style={{ marginTop: '2rem' }}>
         <h3>Existing Bookings</h3>
         {bookings.length === 0 ? (
