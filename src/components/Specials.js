@@ -11,21 +11,21 @@ function Specials() {
       id: 1,
       name: 'Greek Salad',
       description: 'The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.',
-      price: '$12.99',
+      price: '12.99',
       image: greekSaladImg
     },
     {
       id: 2,
       name: 'Bruschetta',
       description: 'Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.',
-      price: '$9.99',
+      price: '9.99',
       image: bruschettaImg
     },
     {
       id: 3,
       name: 'Lemon Dessert',
       description: 'This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.',
-      price: '$5.00',
+      price: '5.00',
       image: lemonDessertImg
     }
   ];
@@ -34,7 +34,7 @@ function Specials() {
     <section className="specials">
       <div className="specials-header">
         <h2>This Week’s Specials!</h2>
-        <button className="menu-button">Online Menu</button>
+        <button className="menu-button">Specials Menu</button>
       </div>
       <div className="specials-grid">
         {specials.map(item => (
@@ -46,7 +46,7 @@ function Specials() {
                 <span className="price">{item.price}</span>
               </div>
               <p>{item.description}</p>
-              <button className="order-button">Order a delivery 🚚</button>
+              <button className="order-button">Order Now</button>
             </div>
           </div>
         ))}

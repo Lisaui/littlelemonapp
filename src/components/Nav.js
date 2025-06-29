@@ -31,7 +31,7 @@ function Nav() {
         className={`nav-links ${menuOpen ? 'open' : ''}`}
         onClick={() => setMenuOpen(false)}
       >
-        <li><NavLink to="/" end>Home</NavLink></li>
+        <li><NavLink to="/"home>Home</NavLink></li>
         <li><NavLink to="/menu">Menu</NavLink></li>
         <li><NavLink to="/about">About</NavLink></li>
         <li><NavLink to="/booking">Reserve</NavLink></li>

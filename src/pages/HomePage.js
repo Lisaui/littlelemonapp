@@ -1,6 +1,8 @@
 import React from 'react';
 import Header from '../components/Header';
 import Specials from '../components/Specials';
+import Footer from '../components/Footer';
+
 
 function HomePage() {
   return (
